@@ -19,10 +19,10 @@
     {
       devShells = forAllSystems ({ pkgs }: {
         default = pkgs.mkShell {
-          name = "vulkan CPP dev shell";
+          name = "Py3 + Jupyter dev shell";
           # gcc appears to be broken
           nativeBuildInputs = with pkgs ;[
-            python3
+            python311
             ## Phython stuff for plotting
             (python3.withPackages (ps: with ps; with python3Packages; [
               jupyter
